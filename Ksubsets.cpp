@@ -1,7 +1,8 @@
 //partition a given set into 2 equal sum subsets
 #include<bits/stdc++.h>
 using namespace std;
- bool backtrack(vector<int>& sums, vector<int>& nums, int target, int cur, int n, int k) 
+
+bool backtrack(vector<int>& sums, vector<int>& nums, int target, int cur, int n, int k) 
     { 
         if(cur==n)
         {
@@ -32,6 +33,7 @@ using namespace std;
         return false;
 
     }
+#check if subsets are possible>
 
 bool CanSubset(vector<int> &vc, int k) {
     int sum = accumulate(vc.begin(), vc.end(), 0);
@@ -45,14 +47,14 @@ bool CanSubset(vector<int> &vc, int k) {
 
 
 int main(){
-    int n; cin>>n;
-    vector<int> vc(n); 
-    for(int i=0;i<n;i++){
-        cin>>vc[i];
+    int num; cin>>num;
+    vector<int> v(num); 
+    for(int i=0;i<num;i++){
+        cin>>v[i];
     }
 
     int k; cin>>k;//k is the number of ss.
-   cout<<endl<<CanSubset(vc,k);
+   cout<<endl<<CanSubset(v,k);
     
     return 0;
 
